@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Login from './pages/login/Login'
+import Signup from './pages/signup/Signup'
+import Blog from './pages/blog/Blog'
+import Form from './pages/form/Form'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { loadUser } from './actions/userAction'
 
-function App() {
+const App = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadUser());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Routes>
+        <Route path='/form' element={<Form />} />
+        <Route path='/' element={<Blog />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
