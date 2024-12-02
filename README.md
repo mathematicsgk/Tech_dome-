@@ -86,6 +86,13 @@ Step 5 : now push this all to github
   201  git rebase --continue
   202  git push origin main --force
 
+
+Check Address:
+React app: http://51.107.23.59/
+Dozzle Monitoring: http://51.107.23.59:8080/
+
+
+
 Issues faced
 
 Method1: In System:windows
