@@ -103,6 +103,6 @@ Frontend not connecting backend due to database connectivity issue.
 Remark:
 Source of learning and deployment done via google and online.And I am new learner in devops but I know about Azure services and Ethical hacking ,iot and cybersecurity and I try my best .And my semester exam running so that’s why I am late.
 
-Thanksyou
+Thank you
 
 
