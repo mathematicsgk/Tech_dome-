@@ -1,74 +1,108 @@
-<<<<<<< HEAD
-# Tech_dome-
-=======
-# Getting Started with Create React App
+DOCUMENTATION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Step 1: launch the server 
+Then connect in mobaextrem
+And ssh it
+Install docker 
+cat ss.sh
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-In the project directory, you can run:
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 
-### `npm start`
+And clone both frontend and backend repos
+git clone  https://github.com/Anand-1432/Techdome-frontend.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+git clone https://github.com/Anand-1432/Techdome-backend.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Step 2 : create docker file for both frontend and backend
+For frontend 
+![0](https://github.com/user-attachments/assets/c293ab60-4b70-4799-a711-03eb4aa5edb7)
 
-### `npm test`
+Build and run it
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   45  sudo docker run hello-world
+   46  docker build -t react-nginx .
+   47  sudo usermod -aG docker $USER
+   48  docker build -t react-nginx .
+   49  sudo docker build -t react-nginx .
+   50  docker run -d -p 80:80 react-nginx
+   51  sudo docker run -d -p 80:80 react-nginx
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For backend
+![1](https://github.com/user-attachments/assets/1e4ca4bf-e650-47cc-b61d-cf6fa8566d9a)
+Same for this
+  docker build -t backend-app1 .
+   78  docker ps
+   79  docker ps -a
+   80  docker rm -f 40 fa 73
+   81  docker ps
+   82  docker run -p 3000:3000 backend-app
+   83  docker run -d -p 3000:3000 backend-app1
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Step 3 : create dozzle for monitoring for frontend and backend
+For frontend
+![2](https://github.com/user-attachments/assets/7b253486-156c-4085-9b03-40ae60dc7d51)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For backend
+![3](https://github.com/user-attachments/assets/24733daa-0da3-4643-abbf-8e08828869ff)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Command for this 
+sudo docker images  108  docker ps
+  109  docker run -d -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 amir20/dozzle:latest
+  110  sudo docker ps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Step 4 : check the deployment
+![4](https://github.com/user-attachments/assets/0be92cf1-7227-4be7-abe1-2321bbf54f12)
+Step 5 : now push this all to github
+  git remote add origin https://github.com/mathematicsgk/Tech_dome-.git
+  188  git remote -v
+  189  git init
+  190  git add .
+  191  git push
+  192  git push origin main
+  193  git pull origin main
+  194  git add .
+  195  git commit -m "add"
+  196  git push origin main
+  197  git pull origin main --rebase
+  198  git branch
+  199  git checkout main
+  200  git add README.md
+  201  git rebase --continue
+  202  git push origin main --force
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Issues faced
 
-## Learn More
+Method1: In System:windows
+Firstly I tried docker software and minkube software in my system so out of 3 containers two container is created but one is running and another is completed and got error in port service.
+![5](https://github.com/user-attachments/assets/79e465ac-0b38-4cea-9ada-a4f166e727d6)
+ 
+![6](https://github.com/user-attachments/assets/d8f51715-1470-4c97-aebf-26bc5a92c619)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![7](https://github.com/user-attachments/assets/ab80db99-cc24-4766-945d-68e3290ff1b2)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Method2: Via Azure Virtual Machine 
+Frontend not connecting backend due to database connectivity issue.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Remark:
+Source of learning and deployment done via google and online.And I am new learner in devops but I know about Azure services and Ethical hacking ,iot and cybersecurity and I try my best .And my semester exam running so that’s why I am late.
 
-### Analyzing the Bundle Size
+Thanksyou
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 9c4eaa1 (Initialize project using Create React App)
