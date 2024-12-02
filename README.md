@@ -98,6 +98,7 @@ Firstly I tried docker software and minkube software in my system so out of 3 co
 
 Method2: Via Azure Virtual Machine 
 Frontend not connecting backend due to database connectivity issue.
+![Screenshot 2024-12-02 223538](https://github.com/user-attachments/assets/1a5f9ad4-600f-4e59-a20d-33b7b03f271f)
 
 
 Remark:
